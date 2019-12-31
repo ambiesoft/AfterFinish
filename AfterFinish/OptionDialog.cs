@@ -13,7 +13,6 @@ namespace Ambiesoft.AfterFinish
 {
     public partial class OptionDialog : Form
     {
-        static readonly string KEY_chkShowMessage = "chkShowMessage";
         static readonly string KEY_chkPlaySound = "chkPlaySound";
         static readonly string KEY_txtWav = "txtWav";
         static readonly string KEY_chkOpenFolder = "chkOpenFolder";
@@ -43,9 +42,6 @@ namespace Ambiesoft.AfterFinish
             bool b;
             string s;
            
-            if(Profile.GetBool(section, KEY_chkShowMessage, false, out b, ini))
-                chkShowMessage.Checked = b;
-
             if(Profile.GetBool(section, KEY_chkPlaySound, false, out b, ini))
                 chkPlaySound.Checked = b;
             if (Profile.GetString(section, KEY_txtWav, string.Empty, out s, ini))
@@ -68,7 +64,6 @@ namespace Ambiesoft.AfterFinish
         public bool SaveValues(string section, HashIni ini)
         {
             bool ok = true;
-            ok &= Profile.WriteBool(section, KEY_chkShowMessage, chkShowMessage.Checked, ini);
             
             ok &= Profile.WriteBool(section, KEY_chkPlaySound, chkPlaySound.Checked, ini);
             ok &= Profile.WriteString(section, KEY_txtWav, txtWav.Text, ini);

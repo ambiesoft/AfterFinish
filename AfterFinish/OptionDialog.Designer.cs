@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkShowMessage = new System.Windows.Forms.CheckBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.chkPlaySound = new System.Windows.Forms.CheckBox();
@@ -45,21 +44,11 @@
             this.btnBrowseWav = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // chkShowMessage
-            // 
-            this.chkShowMessage.AutoSize = true;
-            this.chkShowMessage.Location = new System.Drawing.Point(12, 12);
-            this.chkShowMessage.Name = "chkShowMessage";
-            this.chkShowMessage.Size = new System.Drawing.Size(117, 17);
-            this.chkShowMessage.TabIndex = 100;
-            this.chkShowMessage.Text = "Show &MessageBox";
-            this.chkShowMessage.UseVisualStyleBackColor = true;
-            // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(131, 259);
+            this.btnOK.Location = new System.Drawing.Point(131, 271);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(107, 23);
             this.btnOK.TabIndex = 900;
@@ -70,7 +59,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(244, 259);
+            this.btnCancel.Location = new System.Drawing.Point(244, 271);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 23);
             this.btnCancel.TabIndex = 1000;
@@ -80,7 +69,7 @@
             // chkPlaySound
             // 
             this.chkPlaySound.AutoSize = true;
-            this.chkPlaySound.Location = new System.Drawing.Point(12, 35);
+            this.chkPlaySound.Location = new System.Drawing.Point(12, 12);
             this.chkPlaySound.Name = "chkPlaySound";
             this.chkPlaySound.Size = new System.Drawing.Size(80, 17);
             this.chkPlaySound.TabIndex = 200;
@@ -91,7 +80,7 @@
             // chkLaunchApp
             // 
             this.chkLaunchApp.AutoSize = true;
-            this.chkLaunchApp.Location = new System.Drawing.Point(12, 144);
+            this.chkLaunchApp.Location = new System.Drawing.Point(12, 121);
             this.chkLaunchApp.Name = "chkLaunchApp";
             this.chkLaunchApp.Size = new System.Drawing.Size(84, 17);
             this.chkLaunchApp.TabIndex = 300;
@@ -102,7 +91,7 @@
             // lblApplication
             // 
             this.lblApplication.AutoSize = true;
-            this.lblApplication.Location = new System.Drawing.Point(12, 164);
+            this.lblApplication.Location = new System.Drawing.Point(12, 141);
             this.lblApplication.Name = "lblApplication";
             this.lblApplication.Size = new System.Drawing.Size(62, 13);
             this.lblApplication.TabIndex = 400;
@@ -112,7 +101,7 @@
             // 
             this.txtApp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApp.Location = new System.Drawing.Point(12, 180);
+            this.txtApp.Location = new System.Drawing.Point(12, 157);
             this.txtApp.Name = "txtApp";
             this.txtApp.Size = new System.Drawing.Size(303, 20);
             this.txtApp.TabIndex = 500;
@@ -120,7 +109,7 @@
             // lblArg
             // 
             this.lblArg.AutoSize = true;
-            this.lblArg.Location = new System.Drawing.Point(12, 203);
+            this.lblArg.Location = new System.Drawing.Point(12, 180);
             this.lblArg.Name = "lblArg";
             this.lblArg.Size = new System.Drawing.Size(60, 13);
             this.lblArg.TabIndex = 700;
@@ -130,7 +119,7 @@
             // 
             this.txtArg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtArg.Location = new System.Drawing.Point(12, 219);
+            this.txtArg.Location = new System.Drawing.Point(12, 196);
             this.txtArg.Name = "txtArg";
             this.txtArg.Size = new System.Drawing.Size(339, 20);
             this.txtArg.TabIndex = 800;
@@ -138,7 +127,7 @@
             // btnBrowseApp
             // 
             this.btnBrowseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseApp.Location = new System.Drawing.Point(321, 180);
+            this.btnBrowseApp.Location = new System.Drawing.Point(321, 157);
             this.btnBrowseApp.Name = "btnBrowseApp";
             this.btnBrowseApp.Size = new System.Drawing.Size(30, 20);
             this.btnBrowseApp.TabIndex = 600;
@@ -149,7 +138,7 @@
             // chkOpenFolder
             // 
             this.chkOpenFolder.AutoSize = true;
-            this.chkOpenFolder.Location = new System.Drawing.Point(12, 98);
+            this.chkOpenFolder.Location = new System.Drawing.Point(12, 75);
             this.chkOpenFolder.Name = "chkOpenFolder";
             this.chkOpenFolder.Size = new System.Drawing.Size(84, 17);
             this.chkOpenFolder.TabIndex = 250;
@@ -159,7 +148,7 @@
             // chkShutdown
             // 
             this.chkShutdown.AutoSize = true;
-            this.chkShutdown.Location = new System.Drawing.Point(12, 121);
+            this.chkShutdown.Location = new System.Drawing.Point(12, 98);
             this.chkShutdown.Name = "chkShutdown";
             this.chkShutdown.Size = new System.Drawing.Size(92, 17);
             this.chkShutdown.TabIndex = 275;
@@ -169,7 +158,7 @@
             // lblWave
             // 
             this.lblWave.AutoSize = true;
-            this.lblWave.Location = new System.Drawing.Point(9, 55);
+            this.lblWave.Location = new System.Drawing.Point(9, 32);
             this.lblWave.Name = "lblWave";
             this.lblWave.Size = new System.Drawing.Size(62, 13);
             this.lblWave.TabIndex = 225;
@@ -179,7 +168,7 @@
             // 
             this.txtWav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWav.Location = new System.Drawing.Point(12, 71);
+            this.txtWav.Location = new System.Drawing.Point(12, 48);
             this.txtWav.Name = "txtWav";
             this.txtWav.Size = new System.Drawing.Size(303, 20);
             this.txtWav.TabIndex = 230;
@@ -187,7 +176,7 @@
             // btnBrowseWav
             // 
             this.btnBrowseWav.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseWav.Location = new System.Drawing.Point(321, 71);
+            this.btnBrowseWav.Location = new System.Drawing.Point(321, 48);
             this.btnBrowseWav.Name = "btnBrowseWav";
             this.btnBrowseWav.Size = new System.Drawing.Size(30, 20);
             this.btnBrowseWav.TabIndex = 240;
@@ -201,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(363, 294);
+            this.ClientSize = new System.Drawing.Size(371, 306);
             this.Controls.Add(this.btnBrowseWav);
             this.Controls.Add(this.txtWav);
             this.Controls.Add(this.lblWave);
@@ -216,7 +205,6 @@
             this.Controls.Add(this.chkPlaySound);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.chkShowMessage);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(379, 333);
             this.Name = "OptionDialog";
@@ -233,7 +221,6 @@
 
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        public System.Windows.Forms.CheckBox chkShowMessage;
         public System.Windows.Forms.CheckBox chkPlaySound;
         public System.Windows.Forms.CheckBox chkLaunchApp;
         private System.Windows.Forms.Label lblApplication;

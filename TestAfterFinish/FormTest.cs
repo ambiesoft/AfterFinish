@@ -45,7 +45,7 @@ namespace TestAfterFinish
                 }
 
                 StringBuilder sb = new StringBuilder();
-                sb.AppendLine(string.Format("{0} => {1}", "ShowMessage", dlg.chkShowMessage.Checked));
+                sb.AppendLine(string.Format("{0} => {1}", "chkPlaySound", dlg.chkPlaySound.Checked));
 
                 textBox1.Text = sb.ToString();
 
