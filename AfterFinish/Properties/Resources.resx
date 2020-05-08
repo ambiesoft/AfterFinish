@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="STR_APPANDARGISEMPTY" xml:space="preserve">
+    <value>App and Arg are empty</value>
+  </data>
   <data name="STR_CHOOSE_APPLICATION" xml:space="preserve">
     <value>Choose Application</value>
+  </data>
+  <data name="STR_WAVISEMPTY" xml:space="preserve">
+    <value>Wav is empty</value>
   </data>
 </root>

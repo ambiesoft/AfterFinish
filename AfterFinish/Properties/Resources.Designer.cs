@@ -61,11 +61,29 @@ namespace Ambiesoft.AfterFinish.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to App and Arg are empty.
+        /// </summary>
+        internal static string STR_APPANDARGISEMPTY {
+            get {
+                return ResourceManager.GetString("STR_APPANDARGISEMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose Application.
         /// </summary>
         internal static string STR_CHOOSE_APPLICATION {
             get {
                 return ResourceManager.GetString("STR_CHOOSE_APPLICATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wav is empty.
+        /// </summary>
+        internal static string STR_WAVISEMPTY {
+            get {
+                return ResourceManager.GetString("STR_WAVISEMPTY", resourceCulture);
             }
         }
     }

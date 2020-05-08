@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using Ambiesoft;
+using System.Reflection;
 
 namespace Ambiesoft.AfterFinish
 {
@@ -102,6 +103,34 @@ namespace Ambiesoft.AfterFinish
             if (string.IsNullOrEmpty(wav))
                 return;
             txtWav.Text = wav;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if(chkPlaySound.Checked)
+            {
+                if(string.IsNullOrEmpty( txtWav.Text))
+                {
+                    MessageBox.Show(Properties.Resources.STR_WAVISEMPTY,
+                        Application.ProductName,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    this.DialogResult = DialogResult.None;
+                    return;
+                }
+            }
+            if(chkLaunchApp.Checked)
+            {
+                if(string.IsNullOrEmpty(txtApp.Text) && string.IsNullOrEmpty(txtArg.Text))
+                {
+                    MessageBox.Show(Properties.Resources.STR_APPANDARGISEMPTY,
+                        Application.ProductName,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    this.DialogResult = DialogResult.None;
+                    return;
+                }
+            }
         }
     }
 }
