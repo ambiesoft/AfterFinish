@@ -43,6 +43,7 @@
             this.lblWave = new System.Windows.Forms.Label();
             this.txtWav = new System.Windows.Forms.TextBox();
             this.btnBrowseWav = new System.Windows.Forms.Button();
+            this.btnTestSound = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOK
@@ -130,12 +131,20 @@
             this.btnBrowseWav.UseVisualStyleBackColor = true;
             this.btnBrowseWav.Click += new System.EventHandler(this.btnBrowseWav_Click);
             // 
+            // btnTestSound
+            // 
+            resources.ApplyResources(this.btnTestSound, "btnTestSound");
+            this.btnTestSound.Name = "btnTestSound";
+            this.btnTestSound.UseVisualStyleBackColor = true;
+            this.btnTestSound.Click += new System.EventHandler(this.btnTestSound_Click);
+            // 
             // OptionDialog
             // 
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this.btnTestSound);
             this.Controls.Add(this.btnBrowseWav);
             this.Controls.Add(this.txtWav);
             this.Controls.Add(this.lblWave);
@@ -175,5 +184,6 @@
         private System.Windows.Forms.Label lblWave;
         public System.Windows.Forms.TextBox txtWav;
         private System.Windows.Forms.Button btnBrowseWav;
+        private System.Windows.Forms.Button btnTestSound;
     }
 }
