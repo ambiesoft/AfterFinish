@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 using Ambiesoft;
 using System.Reflection;
@@ -31,7 +32,7 @@ namespace Ambiesoft.AfterFinish
         private void updateState()
         {
             txtApp.Enabled = txtArg.Enabled = btnBrowseApp.Enabled = chkLaunchApp.Checked;
-            txtWav.Enabled = btnBrowseWav.Enabled = chkPlaySound.Checked;
+            txtWav.Enabled = btnBrowseWav.Enabled = btnTestSound.Enabled = chkPlaySound.Checked;
         }
         private void chkLaunchApp_CheckedChanged(object sender, EventArgs e)
         {
@@ -109,7 +110,7 @@ namespace Ambiesoft.AfterFinish
         {
             if(chkPlaySound.Checked)
             {
-                if(string.IsNullOrEmpty( txtWav.Text))
+                if (string.IsNullOrEmpty(txtWav.Text))
                 {
                     MessageBox.Show(Properties.Resources.STR_WAVISEMPTY,
                         Application.ProductName,
@@ -128,6 +129,59 @@ namespace Ambiesoft.AfterFinish
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                     this.DialogResult = DialogResult.None;
+                    return;
+                }
+            }
+        }
+
+        private System.Media.SoundPlayer player = null;
+        private void btnTestSound_Click(object sender, EventArgs e)
+        {
+            PlayWav(false);
+        }
+        public void PlayWav(bool bShowNoError)
+        {
+            if (!bShowNoError)
+            {
+                if (string.IsNullOrEmpty(txtWav.Text))
+                {
+                    MessageBox.Show(Properties.Resources.STR_WAVISEMPTY,
+                          Application.ProductName,
+                          MessageBoxButtons.OK,
+                          MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!File.Exists(txtWav.Text))
+                {
+                    MessageBox.Show(Properties.Resources.STR_WAVFILENOTEXIST,
+                          Application.ProductName,
+                          MessageBoxButtons.OK,
+                          MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            if (player != null)
+            {
+                player.Stop();
+                player.Dispose();
+                player = null;
+            }
+
+            try
+            {
+                player = new System.Media.SoundPlayer(txtWav.Text);
+                player.Play();
+            }
+            catch (Exception ex)
+            {
+                if (!bShowNoError)
+                {
+                    MessageBox.Show(ex.Message,
+                          Application.ProductName,
+                          MessageBoxButtons.OK,
+                          MessageBoxIcon.Error);
                     return;
                 }
             }

@@ -163,4 +163,7 @@
   <data name="lblWave.Text" xml:space="preserve">
     <value>&amp;wavサウンド:</value>
   </data>
+  <data name="btnTestSound.Text" xml:space="preserve">
+    <value>サウンドテスト(&amp;T)</value>
+  </data>
 </root>

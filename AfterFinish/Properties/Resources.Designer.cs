@@ -79,6 +79,15 @@ namespace Ambiesoft.AfterFinish.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Wav file does not exist.
+        /// </summary>
+        internal static string STR_WAVFILENOTEXIST {
+            get {
+                return ResourceManager.GetString("STR_WAVFILENOTEXIST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Wav is empty.
         /// </summary>
         internal static string STR_WAVISEMPTY {
