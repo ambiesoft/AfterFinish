@@ -10,6 +10,7 @@ using System.IO;
 
 using Ambiesoft;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace Ambiesoft.AfterFinish
 {
@@ -22,16 +23,30 @@ namespace Ambiesoft.AfterFinish
         static readonly string KEY_chkLaunchApp = "chkLaunchApp";
         static readonly string KEY_txtApp = "txtApp";
         static readonly string KEY_txtArg = "txtArg";
-        public OptionDialog()
+
+        bool bShowPlaySound_;
+        bool bShowOpenFolder_;
+        bool bShowShutdown_;
+        bool bShowLaunchApp_;
+        public OptionDialog(
+            bool bShowPlaySound,
+            bool bShowOpenFolder,
+            bool bShowShutdown,
+            bool bShowLaunchApp)
         {
             InitializeComponent();
+
+            chkPlaySound.Visible = bShowPlaySound_ = bShowPlaySound;
+            chkOpenFolder.Visible = bShowOpenFolder_ = bShowOpenFolder;
+            chkShutdown.Visible = bShowShutdown_ = bShowShutdown;
+            chkLaunchApp.Visible = bShowLaunchApp_ = bShowLaunchApp;
 
             updateState();
         }
 
         private void updateState()
         {
-            txtApp.Enabled = txtArg.Enabled = btnBrowseApp.Enabled = chkLaunchApp.Checked;
+            txtApp.Enabled = txtArg.Enabled = btnBrowseApp.Enabled = btnLanuchTest.Enabled = chkLaunchApp.Checked;
             txtWav.Enabled = btnBrowseWav.Enabled = btnTestSound.Enabled = chkPlaySound.Checked;
         }
         private void chkLaunchApp_CheckedChanged(object sender, EventArgs e)
@@ -87,6 +102,13 @@ namespace Ambiesoft.AfterFinish
             if (string.IsNullOrEmpty(app))
                 return;
             txtApp.Text = app;
+        }
+        private void btnBrowseArg_Click(object sender, EventArgs e)
+        {
+            string arg = AmbLib.GetOpenFileDialog(Properties.Resources.STR_CHOOSE_FILE);
+            if (string.IsNullOrEmpty(arg))
+                return;
+            txtArg.Text = arg;
         }
 
         private void chkPlaySound_CheckedChanged(object sender, EventArgs e)
@@ -184,6 +206,81 @@ namespace Ambiesoft.AfterFinish
                           MessageBoxIcon.Error);
                     return;
                 }
+            }
+        }
+
+        public string ToDescription()
+        {
+            StringBuilder sb = new StringBuilder();
+            if (bShowPlaySound_ && chkPlaySound.Checked)
+            {
+                sb.AppendLine("Play Sound");
+                sb.AppendLine(" wav sound:" + txtWav.Text);
+            }
+            if (bShowOpenFolder_ && chkOpenFolder.Checked)
+            {
+                sb.AppendLine("Open Folder");
+            }
+            if (bShowShutdown_ && chkShutdown.Checked)
+            {
+                sb.AppendLine("Shutdown OS");
+            }
+            if (bShowLaunchApp_ && chkLaunchApp.Checked)
+            {
+                sb.AppendLine("Launch App");
+                sb.AppendLine(" Application:" + txtApp.Text);
+                sb.AppendLine(" Arguments:" + txtArg.Text);
+            }
+            return sb.ToString();
+        }
+
+        private void btnLanuchTest_Click(object sender, EventArgs e)
+        {
+            LaunchApp();
+        }
+        void LaunchApp()
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(txtApp.Text) && !string.IsNullOrEmpty(txtArg.Text))
+                    Process.Start(txtApp.Text, txtArg.Text);
+                else
+                    Process.Start(!string.IsNullOrEmpty(txtApp.Text) ?
+                        txtApp.Text : txtArg.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                    Application.ProductName,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+    
+        public void DoNotify()
+        {
+            if(bShowPlaySound_ && chkPlaySound.Checked)
+            {
+                PlayWav(false);
+            }
+            if(bShowOpenFolder_ && chkOpenFolder.Checked)
+            {
+                MessageBox.Show("Show Folder is not implemented",
+                    Application.ProductName,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            if(bShowShutdown_ && chkShutdown.Checked)
+            {
+                MessageBox.Show("Shutdown is not implemented",
+                    Application.ProductName,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            if(bShowLaunchApp_ && chkLaunchApp.Checked)
+            {
+                LaunchApp();
             }
         }
     }

@@ -123,6 +123,9 @@
   <data name="STR_CHOOSE_APPLICATION" xml:space="preserve">
     <value>アプリケーションの選択</value>
   </data>
+  <data name="STR_CHOOSE_FILE" xml:space="preserve">
+    <value>ファイルの選択</value>
+  </data>
   <data name="STR_WAVFILENOTEXIST" xml:space="preserve">
     <value>Wavファイルが存在しません</value>
   </data>

@@ -19,7 +19,7 @@ namespace Ambiesoft.AfterFinish.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -75,6 +75,15 @@ namespace Ambiesoft.AfterFinish.Properties {
         internal static string STR_CHOOSE_APPLICATION {
             get {
                 return ResourceManager.GetString("STR_CHOOSE_APPLICATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose File.
+        /// </summary>
+        internal static string STR_CHOOSE_FILE {
+            get {
+                return ResourceManager.GetString("STR_CHOOSE_FILE", resourceCulture);
             }
         }
         

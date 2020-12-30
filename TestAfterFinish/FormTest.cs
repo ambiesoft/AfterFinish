@@ -14,6 +14,7 @@ namespace TestAfterFinish
 {
     public partial class FormTest : Form
     {
+        Ambiesoft.AfterFinish.OptionDialog afterFinisiDlg_ = new Ambiesoft.AfterFinish.OptionDialog(true, true, true, true);
         public FormTest()
         {
             InitializeComponent();
@@ -28,38 +29,62 @@ namespace TestAfterFinish
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        bool LoadAfterFinish()
         {
-            using (Ambiesoft.AfterFinish.OptionDialog dlg = new Ambiesoft.AfterFinish.OptionDialog())
+            HashIni ini = Profile.ReadAll(IniPath);
+            if (!afterFinisiDlg_.LoadValues("AfterFinish", ini))
             {
-                HashIni ini = Profile.ReadAll(IniPath);
-                if (!dlg.LoadValues("AfterFinish", ini))
-                {
-                    MessageBox.Show("error");
-                    return;
-                }
-                if (DialogResult.OK != dlg.ShowDialog())
-                {
-                    textBox1.Text = "Canceled";
-                    return;
-                }
-
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(string.Format("{0} => {1}", "chkPlaySound", dlg.chkPlaySound.Checked));
-
-                textBox1.Text = sb.ToString();
-
-                if (!dlg.SaveValues("AfterFinish", ini))
-                {
-                    MessageBox.Show("error");
-                    return;
-                }
-                if (!Profile.WriteAll(ini, IniPath))
-                {
-                    MessageBox.Show("error");
-                    return;
-                }
+                MessageBox.Show("error");
+                return false;
             }
+            return true;
+        }
+        bool SaveAfterFinish()
+        {
+            HashIni ini = Profile.ReadAll(IniPath);
+            if (!afterFinisiDlg_.SaveValues("AfterFinish", ini))
+            {
+                MessageBox.Show("error");
+                return false;
+            }
+            if (!Profile.WriteAll(ini, IniPath))
+            {
+                MessageBox.Show("error");
+                return false;
+            }
+            return true;
+        }
+        private void button1_Click(object sender, EventArgs e) 
+        {
+            if (!LoadAfterFinish())
+                return;
+
+            if (DialogResult.OK != afterFinisiDlg_.ShowDialog())
+            {
+                txtDescription.Text = "Canceled";
+                return;
+            }
+
+            txtDescription.Text = afterFinisiDlg_.ToDescription();
+
+            SaveAfterFinish();
+        }
+
+        private void btnLaunch_Click(object sender, EventArgs e)
+        {
+            if (!LoadAfterFinish())
+                return;
+            afterFinisiDlg_.DoNotify();
+        }
+
+        private void FormTest_Load(object sender, EventArgs e)
+        {
+            if(!LoadAfterFinish())
+            {
+                Close();
+                return;
+            }
+            txtDescription.Text = afterFinisiDlg_.ToDescription();
         }
     }
 }

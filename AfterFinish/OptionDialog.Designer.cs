@@ -44,6 +44,8 @@
             this.txtWav = new System.Windows.Forms.TextBox();
             this.btnBrowseWav = new System.Windows.Forms.Button();
             this.btnTestSound = new System.Windows.Forms.Button();
+            this.btnLanuchTest = new System.Windows.Forms.Button();
+            this.btnBrowseArg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOK
@@ -138,18 +140,34 @@
             this.btnTestSound.UseVisualStyleBackColor = true;
             this.btnTestSound.Click += new System.EventHandler(this.btnTestSound_Click);
             // 
+            // btnLanuchTest
+            // 
+            resources.ApplyResources(this.btnLanuchTest, "btnLanuchTest");
+            this.btnLanuchTest.Name = "btnLanuchTest";
+            this.btnLanuchTest.UseVisualStyleBackColor = true;
+            this.btnLanuchTest.Click += new System.EventHandler(this.btnLanuchTest_Click);
+            // 
+            // btnBrowseArg
+            // 
+            resources.ApplyResources(this.btnBrowseArg, "btnBrowseArg");
+            this.btnBrowseArg.Name = "btnBrowseArg";
+            this.btnBrowseArg.UseVisualStyleBackColor = true;
+            this.btnBrowseArg.Click += new System.EventHandler(this.btnBrowseArg_Click);
+            // 
             // OptionDialog
             // 
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this.btnLanuchTest);
             this.Controls.Add(this.btnTestSound);
             this.Controls.Add(this.btnBrowseWav);
             this.Controls.Add(this.txtWav);
             this.Controls.Add(this.lblWave);
             this.Controls.Add(this.chkShutdown);
             this.Controls.Add(this.chkOpenFolder);
+            this.Controls.Add(this.btnBrowseArg);
             this.Controls.Add(this.btnBrowseApp);
             this.Controls.Add(this.txtArg);
             this.Controls.Add(this.lblArg);
@@ -185,5 +203,7 @@
         public System.Windows.Forms.TextBox txtWav;
         private System.Windows.Forms.Button btnBrowseWav;
         private System.Windows.Forms.Button btnTestSound;
+        private System.Windows.Forms.Button btnLanuchTest;
+        private System.Windows.Forms.Button btnBrowseArg;
     }
 }

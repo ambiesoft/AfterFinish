@@ -29,29 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.btnLaunch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnEdit
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.btnEdit, "btnEdit");
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtDescription
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.txtDescription, "txtDescription");
+            this.txtDescription.Name = "txtDescription";
+            // 
+            // btnLaunch
+            // 
+            resources.ApplyResources(this.btnLaunch, "btnLaunch");
+            this.btnLaunch.Name = "btnLaunch";
+            this.btnLaunch.UseVisualStyleBackColor = true;
+            this.btnLaunch.Click += new System.EventHandler(this.btnLaunch_Click);
             // 
             // FormTest
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLaunch);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.btnEdit);
             this.Name = "FormTest";
+            this.Load += new System.EventHandler(this.FormTest_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -59,8 +69,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Button btnLaunch;
     }
 }
 
