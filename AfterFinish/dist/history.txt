@@ -1,2 +1,5 @@
-﻿2020/08/01 v1.0.1
+﻿2021/01/01 v1.0.3
+focus and enable-disable while checkeding
+
+2020/08/01 v1.0.1
 Add wav sound function

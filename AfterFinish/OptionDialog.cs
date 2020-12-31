@@ -46,8 +46,8 @@ namespace Ambiesoft.AfterFinish
 
         private void updateState()
         {
-            txtApp.Enabled = txtArg.Enabled = btnBrowseApp.Enabled = btnLanuchTest.Enabled = chkLaunchApp.Checked;
             txtWav.Enabled = btnBrowseWav.Enabled = btnTestSound.Enabled = chkPlaySound.Checked;
+            txtApp.Enabled = txtArg.Enabled = btnBrowseApp.Enabled = btnBrowseArg.Enabled = btnLanuchTest.Enabled = chkLaunchApp.Checked;
         }
         private void chkLaunchApp_CheckedChanged(object sender, EventArgs e)
         {
@@ -138,6 +138,8 @@ namespace Ambiesoft.AfterFinish
                         Application.ProductName,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+                    txtWav.Focus();
+
                     this.DialogResult = DialogResult.None;
                     return;
                 }
@@ -150,6 +152,10 @@ namespace Ambiesoft.AfterFinish
                         Application.ProductName,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+
+                    if (string.IsNullOrEmpty(txtApp.Text))
+                        txtApp.Focus();
+
                     this.DialogResult = DialogResult.None;
                     return;
                 }
