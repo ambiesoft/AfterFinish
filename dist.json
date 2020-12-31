@@ -1,0 +1,32 @@
+{
+    "name": "AfterFinish",
+    "solution": "AfterFinish.sln",
+    "targetproject": "zzzDist",
+    "configuration": "Release",
+    "targets": [
+        {
+            "setoutdirforbuild": true,
+            "outdir": "build\\AfterFinish\\",
+            "platform": "Any CPU"
+        }
+    ],
+    "ShouldBeFiles": [
+        "Ambiesoft.AfterFinish.dll",
+        "Ambiesoft.AfterFinish.history.txt",
+        "Ambiesoft.AfterFinish.pdb",
+        "Ambiesoft.AfterFinish.README.md",
+        "Ambiesoft.AmbLib.dll",
+        "Ambiesoft.AmbLib.pdb",
+        "Ambiesoft.Profile.dll",
+        "Ambiesoft.Profile.pdb",
+        "ja-JP\\Ambiesoft.AfterFinish.resources.dll"
+    ],
+    "TotalFileCount": 9,
+    "archivedir": "C:/Linkout/",
+    "remotedir":   "http://ambiesoft.mooo.com/ffdav/uploads/AfterFinish/",
+    "remotesha1" : "http://ambiesoft.mooo.com/ffdav/uploads/getSha1.php?file=AfterFinish/{}",
+    "ShouldNotBeFiles": [],
+    "ShouldBeOneOfThem": [],
+    "obtainverfrom": "Ambiesoft.AfterFinish.history.txt",
+    "obtainverregex": "\\d+\\.\\d+\\.\\d+"
+}
