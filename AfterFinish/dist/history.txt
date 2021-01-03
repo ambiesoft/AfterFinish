@@ -1,4 +1,7 @@
-﻿2021/01/01 v1.0.3
+﻿2021/01/04 v1.0.4
+Implement shutdown
+
+2021/01/01 v1.0.3
 focus and enable-disable while checkeding
 
 2020/08/01 v1.0.1
