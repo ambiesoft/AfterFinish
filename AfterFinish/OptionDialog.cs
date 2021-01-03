@@ -279,10 +279,15 @@ namespace Ambiesoft.AfterFinish
             }
             if(bShowShutdown_ && chkShutdown.Checked)
             {
-                MessageBox.Show("Shutdown is not implemented",
-                    Application.ProductName,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                //MessageBox.Show("Shutdown is not implemented",
+                //    Application.ProductName,
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Warning);
+                Ambiesoft.AfterRunLib.FormMain form = new AfterRunLib.FormMain();
+                form.IsShutdown = true;
+                form.Interval = 30;
+                form.TopMost = true;
+                form.Show();
             }
             if(bShowLaunchApp_ && chkLaunchApp.Checked)
             {

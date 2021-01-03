@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ambiesoft.AfterRunLib">
+      <HintPath>..\..\..\..\..\..\..\Linkout\DNAssembly.NET4\Ambiesoft.AfterRunLib.dll</HintPath>
+    </Reference>
     <Reference Include="Ambiesoft.AmbLib">
       <HintPath>C:\Linkout\DNAssembly.NET4\Ambiesoft.AmbLib.dll</HintPath>
     </Reference>
