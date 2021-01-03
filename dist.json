@@ -19,9 +19,12 @@
         "Ambiesoft.AmbLib.pdb",
         "Ambiesoft.Profile.dll",
         "Ambiesoft.Profile.pdb",
+        "Ambiesoft.AfterRunLib.pdb",
+        "ja-JP\\Ambiesoft.AfterRunLib.resources.dll",
+        "Ambiesoft.AfterRunLib.dll",
         "ja-JP\\Ambiesoft.AfterFinish.resources.dll"
     ],
-    "TotalFileCount": 9,
+    "TotalFileCount": "exact",
     "archivedir": "C:/Linkout/",
     "remotedir":   "http://ambiesoft.mooo.com/ffdav/uploads/AfterFinish/",
     "remotesha1" : "http://ambiesoft.mooo.com/ffdav/uploads/getSha1.php?file=AfterFinish/{}",
