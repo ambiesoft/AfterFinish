@@ -17,6 +17,8 @@
         "Ambiesoft.AfterFinish.README.md",
         "Ambiesoft.AmbLib.dll",
         "Ambiesoft.AmbLib.pdb",
+        "Ambiesoft.AmbLibcpp.pdb",
+        "Ambiesoft.AmbLibcpp.dll",
         "Ambiesoft.Profile.dll",
         "Ambiesoft.Profile.pdb",
         "Ambiesoft.AfterRunLib.pdb",
