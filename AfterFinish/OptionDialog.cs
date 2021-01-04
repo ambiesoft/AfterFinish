@@ -11,6 +11,7 @@ using System.IO;
 using Ambiesoft;
 using System.Reflection;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Ambiesoft.AfterFinish
 {
@@ -244,7 +245,7 @@ namespace Ambiesoft.AfterFinish
         {
             LaunchApp();
         }
-        void LaunchApp()
+        void LaunchApp(bool bNotShowError)
         {
             try
             {
@@ -256,19 +257,32 @@ namespace Ambiesoft.AfterFinish
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,
-                    Application.ProductName,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                if (!bNotShowError)
+                {
+                    MessageBox.Show(ex.Message,
+                        Application.ProductName,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
-
-    
+        void LaunchApp()
+        {
+            LaunchApp(false);
+        }
+        void startOfShutdownThread()
+        {
+            Ambiesoft.AfterRunLib.FormMain form = new AfterRunLib.FormMain();
+            form.IsShutdown = true;
+            form.Interval = 30;
+            form.TopMost = true;
+            form.ShowDialog(null);
+        }
         public void DoNotify()
         {
             if(bShowPlaySound_ && chkPlaySound.Checked)
             {
-                PlayWav(false);
+                PlayWav(true);
             }
             if(bShowOpenFolder_ && chkOpenFolder.Checked)
             {
@@ -277,21 +291,14 @@ namespace Ambiesoft.AfterFinish
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-            if(bShowShutdown_ && chkShutdown.Checked)
-            {
-                //MessageBox.Show("Shutdown is not implemented",
-                //    Application.ProductName,
-                //    MessageBoxButtons.OK,
-                //    MessageBoxIcon.Warning);
-                Ambiesoft.AfterRunLib.FormMain form = new AfterRunLib.FormMain();
-                form.IsShutdown = true;
-                form.Interval = 30;
-                form.TopMost = true;
-                form.Show();
-            }
             if(bShowLaunchApp_ && chkLaunchApp.Checked)
             {
-                LaunchApp();
+                LaunchApp(true);
+            }
+            if (bShowShutdown_ && chkShutdown.Checked)
+            {
+                Thread thread = new Thread(startOfShutdownThread);
+                thread.Start();
             }
         }
     }

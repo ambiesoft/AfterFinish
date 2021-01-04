@@ -75,6 +75,9 @@ namespace TestAfterFinish
             if (!LoadAfterFinish())
                 return;
             afterFinisiDlg_.DoNotify();
+
+            //afterFinisiDlg_.ShowDialog();
+            //MessageBox.Show("AA");
         }
 
         private void FormTest_Load(object sender, EventArgs e)

@@ -1,4 +1,7 @@
-﻿2021/01/04 v1.0.4
+﻿2021/01/04 v1.0.5
+Thread shutdown
+
+2021/01/04 v1.0.4
 Implement shutdown
 
 2021/01/01 v1.0.3
