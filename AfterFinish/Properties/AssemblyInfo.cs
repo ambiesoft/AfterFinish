@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("AfterFinish")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("section9")]
+[assembly: AssemblyCompany("Ambiesoft")]
 [assembly: AssemblyProduct("AfterFinish")]
 [assembly: AssemblyCopyright("Copyright © Ambiesoft 2021")]
 [assembly: AssemblyTrademark("")]
@@ -31,6 +31,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.6.*")]
+[assembly: AssemblyVersion("1.0.7.*")]
 
 // [assembly: AssemblyFileVersion("1.0.0.0")]

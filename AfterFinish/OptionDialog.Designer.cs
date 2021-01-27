@@ -46,6 +46,9 @@
             this.btnTestSound = new System.Windows.Forms.Button();
             this.btnLanuchTest = new System.Windows.Forms.Button();
             this.btnBrowseArg = new System.Windows.Forms.Button();
+            this.lblRepeat = new System.Windows.Forms.Label();
+            this.udRepeatCount = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.udRepeatCount)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOK
@@ -154,12 +157,34 @@
             this.btnBrowseArg.UseVisualStyleBackColor = true;
             this.btnBrowseArg.Click += new System.EventHandler(this.btnBrowseArg_Click);
             // 
+            // lblRepeat
+            // 
+            resources.ApplyResources(this.lblRepeat, "lblRepeat");
+            this.lblRepeat.Name = "lblRepeat";
+            // 
+            // udRepeatCount
+            // 
+            resources.ApplyResources(this.udRepeatCount, "udRepeatCount");
+            this.udRepeatCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.udRepeatCount.Name = "udRepeatCount";
+            this.udRepeatCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // OptionDialog
             // 
             this.AcceptButton = this.btnOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this.udRepeatCount);
+            this.Controls.Add(this.lblRepeat);
             this.Controls.Add(this.btnLanuchTest);
             this.Controls.Add(this.btnTestSound);
             this.Controls.Add(this.btnBrowseWav);
@@ -181,6 +206,7 @@
             this.Name = "OptionDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            ((System.ComponentModel.ISupportInitialize)(this.udRepeatCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +231,7 @@
         private System.Windows.Forms.Button btnTestSound;
         private System.Windows.Forms.Button btnLanuchTest;
         private System.Windows.Forms.Button btnBrowseArg;
+        private System.Windows.Forms.Label lblRepeat;
+        private System.Windows.Forms.NumericUpDown udRepeatCount;
     }
 }

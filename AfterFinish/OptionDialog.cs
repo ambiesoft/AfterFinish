@@ -12,6 +12,8 @@ using Ambiesoft;
 using System.Reflection;
 using System.Diagnostics;
 using System.Threading;
+using System.Media;
+using System.Threading.Tasks;
 
 namespace Ambiesoft.AfterFinish
 {
@@ -19,6 +21,7 @@ namespace Ambiesoft.AfterFinish
     {
         static readonly string KEY_chkPlaySound = "chkPlaySound";
         static readonly string KEY_txtWav = "txtWav";
+        static readonly string KEY_udRepeatCount = "udRepeatCount";
         static readonly string KEY_chkOpenFolder = "chkOpenFolder";
         static readonly string KEY_chkShutdown = "chkShutdown";
         static readonly string KEY_chkLaunchApp = "chkLaunchApp";
@@ -47,7 +50,7 @@ namespace Ambiesoft.AfterFinish
 
         private void updateState()
         {
-            txtWav.Enabled = btnBrowseWav.Enabled = btnTestSound.Enabled = chkPlaySound.Checked;
+            txtWav.Enabled = btnBrowseWav.Enabled = btnTestSound.Enabled = udRepeatCount.Enabled = chkPlaySound.Checked;
             txtApp.Enabled = txtArg.Enabled = btnBrowseApp.Enabled = btnBrowseArg.Enabled = btnLanuchTest.Enabled = chkLaunchApp.Checked;
         }
         private void chkLaunchApp_CheckedChanged(object sender, EventArgs e)
@@ -58,12 +61,15 @@ namespace Ambiesoft.AfterFinish
         public bool LoadValues(string section, HashIni ini)
         {
             bool b;
+            int i;
             string s;
            
             if(Profile.GetBool(section, KEY_chkPlaySound, false, out b, ini))
                 chkPlaySound.Checked = b;
             if (Profile.GetString(section, KEY_txtWav, string.Empty, out s, ini))
                 txtWav.Text = s;
+            if (Profile.GetInt(section, KEY_udRepeatCount, 1, out i, ini))
+                udRepeatCount.Value = i;
 
             if (Profile.GetBool(section, KEY_chkOpenFolder, false, out b, ini))
                 chkOpenFolder.Checked = b;
@@ -85,6 +91,7 @@ namespace Ambiesoft.AfterFinish
             
             ok &= Profile.WriteBool(section, KEY_chkPlaySound, chkPlaySound.Checked, ini);
             ok &= Profile.WriteString(section, KEY_txtWav, txtWav.Text, ini);
+            ok &= Profile.WriteInt(section, KEY_udRepeatCount, Decimal.ToInt32(udRepeatCount.Value), ini);
 
             ok &= Profile.WriteBool(section, KEY_chkOpenFolder, chkOpenFolder.Checked, ini);
             ok &= Profile.WriteBool(section, KEY_chkShutdown, chkShutdown.Checked, ini);
@@ -163,10 +170,38 @@ namespace Ambiesoft.AfterFinish
             }
         }
 
-        private System.Media.SoundPlayer player = null;
+
+        volatile int playid_;
+        bool TogglePlayButton(bool? on = null)
+        {
+            int tt = on == null ? 1 : ((bool)on ? 2 : 3);
+            if (tt != 3 && (tt == 2 || btnTestSound.Tag == null || !((bool)btnTestSound.Tag)))
+            {
+                btnTestSound.Tag = true;
+                btnTestSound.Text = Properties.Resources.BTN_TESTSOUND_STOP;
+                return true;
+            }
+            else
+            {
+                btnTestSound.Tag = false;
+                btnTestSound.Text = Properties.Resources.BTN_TESTSOUND_START;
+                return false;
+            }
+        }
         private void btnTestSound_Click(object sender, EventArgs e)
         {
-            PlayWav(false);
+            if(TogglePlayButton())
+            {
+                PlayWav(false);
+            }
+            else
+            {
+                StopWav();
+            }
+        }
+        public void StopWav()
+        {
+            ++playid_;
         }
         public void PlayWav(bool bShowNoError)
         {
@@ -191,17 +226,29 @@ namespace Ambiesoft.AfterFinish
                 }
             }
 
-            if (player != null)
-            {
-                player.Stop();
-                player.Dispose();
-                player = null;
-            }
-
             try
             {
-                player = new System.Media.SoundPlayer(txtWav.Text);
-                player.Play();
+                int pi = ++playid_;
+                Task.Factory.StartNew(() =>
+                {
+                    try
+                    {
+                        var player = new SoundPlayer(txtWav.Text);
+                        int count = Decimal.ToInt32(udRepeatCount.Value);
+                        for (int i = 0; i < count; ++i)
+                        {
+                            if (pi != playid_)
+                                break;
+                            player.PlaySync();
+                        }
+
+                        PlayFinished();
+                    }
+                    catch(Exception ex)
+                    {
+                        PlayErrored(ex);
+                    }
+                });
             }
             catch (Exception ex)
             {
@@ -216,6 +263,28 @@ namespace Ambiesoft.AfterFinish
             }
         }
 
+        void PlayErrored(Exception ex)
+        {
+            if (InvokeRequired)
+            {
+                this.BeginInvoke(new MethodInvoker(() => { PlayErrored(ex); }));
+                return;
+            }
+            MessageBox.Show(ex.Message,
+                Application.ProductName,
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+        void PlayFinished()
+        {
+            if (InvokeRequired)
+            {
+                this.BeginInvoke(new MethodInvoker(() => { PlayFinished(); }));
+                return;
+            }
+            TogglePlayButton(false);
+        }
+
         public string ToDescription()
         {
             StringBuilder sb = new StringBuilder();
@@ -223,6 +292,7 @@ namespace Ambiesoft.AfterFinish
             {
                 sb.AppendLine("Play Sound");
                 sb.AppendLine(" wav sound:" + txtWav.Text);
+                sb.AppendLine(" Repeat Count:" + udRepeatCount.Value);
             }
             if (bShowOpenFolder_ && chkOpenFolder.Checked)
             {

@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 302</value>
+    <value>139, 279</value>
   </data>
   <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
+    <value>107, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnOK.TabIndex" type="System.Int32, mscorlib">
@@ -145,16 +145,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 302</value>
+    <value>252, 279</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
+    <value>107, 21</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>1000</value>
@@ -172,16 +172,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="chkPlaySound.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chkPlaySound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 12</value>
+    <value>8, 11</value>
   </data>
   <data name="chkPlaySound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>81, 16</value>
   </data>
   <data name="chkPlaySound.TabIndex" type="System.Int32, mscorlib">
     <value>200</value>
@@ -199,16 +199,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkPlaySound.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="chkLaunchApp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chkLaunchApp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 141</value>
+    <value>8, 145</value>
   </data>
   <data name="chkLaunchApp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>84, 16</value>
   </data>
   <data name="chkLaunchApp.TabIndex" type="System.Int32, mscorlib">
     <value>300</value>
@@ -226,16 +226,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkLaunchApp.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="lblApplication.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblApplication.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 161</value>
+    <value>8, 164</value>
   </data>
   <data name="lblApplication.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+    <value>64, 12</value>
   </data>
   <data name="lblApplication.TabIndex" type="System.Int32, mscorlib">
     <value>400</value>
@@ -253,16 +253,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblApplication.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="txtApp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="txtApp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 177</value>
+    <value>8, 178</value>
   </data>
   <data name="txtApp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 20</value>
+    <value>315, 19</value>
   </data>
   <data name="txtApp.TabIndex" type="System.Int32, mscorlib">
     <value>500</value>
@@ -277,7 +277,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtApp.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="lblArg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -286,7 +286,7 @@
     <value>8, 200</value>
   </data>
   <data name="lblArg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
+    <value>62, 12</value>
   </data>
   <data name="lblArg.TabIndex" type="System.Int32, mscorlib">
     <value>700</value>
@@ -304,16 +304,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblArg.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="txtArg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="txtArg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 216</value>
+    <value>8, 214</value>
   </data>
   <data name="txtArg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 20</value>
+    <value>315, 19</value>
   </data>
   <data name="txtArg.TabIndex" type="System.Int32, mscorlib">
     <value>800</value>
@@ -328,16 +328,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtArg.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="btnBrowseApp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="btnBrowseApp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 177</value>
+    <value>329, 178</value>
   </data>
   <data name="btnBrowseApp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
+    <value>30, 18</value>
   </data>
   <data name="btnBrowseApp.TabIndex" type="System.Int32, mscorlib">
     <value>600</value>
@@ -355,16 +355,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnBrowseApp.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="chkOpenFolder.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chkOpenFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 95</value>
+    <value>8, 103</value>
   </data>
   <data name="chkOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>86, 16</value>
   </data>
   <data name="chkOpenFolder.TabIndex" type="System.Int32, mscorlib">
     <value>250</value>
@@ -382,16 +382,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkOpenFolder.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="chkShutdown.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chkShutdown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 118</value>
+    <value>8, 124</value>
   </data>
   <data name="chkShutdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+    <value>92, 16</value>
   </data>
   <data name="chkShutdown.TabIndex" type="System.Int32, mscorlib">
     <value>275</value>
@@ -409,16 +409,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkShutdown.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="lblWave.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblWave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 32</value>
+    <value>5, 30</value>
   </data>
   <data name="lblWave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+    <value>61, 12</value>
   </data>
   <data name="lblWave.TabIndex" type="System.Int32, mscorlib">
     <value>225</value>
@@ -436,16 +436,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblWave.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="txtWav.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="txtWav.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 48</value>
+    <value>8, 44</value>
   </data>
   <data name="txtWav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 20</value>
+    <value>315, 19</value>
   </data>
   <data name="txtWav.TabIndex" type="System.Int32, mscorlib">
     <value>230</value>
@@ -460,16 +460,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtWav.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btnBrowseWav.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="btnBrowseWav.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 47</value>
+    <value>329, 44</value>
   </data>
   <data name="btnBrowseWav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
+    <value>30, 19</value>
   </data>
   <data name="btnBrowseWav.TabIndex" type="System.Int32, mscorlib">
     <value>240</value>
@@ -487,16 +487,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnBrowseWav.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="btnTestSound.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="btnTestSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 74</value>
+    <value>245, 68</value>
   </data>
   <data name="btnTestSound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 23</value>
+    <value>114, 21</value>
   </data>
   <data name="btnTestSound.TabIndex" type="System.Int32, mscorlib">
     <value>245</value>
@@ -514,13 +514,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnTestSound.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnLanuchTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 242</value>
+    <value>252, 238</value>
   </data>
   <data name="btnLanuchTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 23</value>
+    <value>107, 21</value>
   </data>
   <data name="btnLanuchTest.TabIndex" type="System.Int32, mscorlib">
     <value>875</value>
@@ -538,7 +538,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLanuchTest.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="btnBrowseArg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -547,10 +547,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnBrowseArg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 216</value>
+    <value>329, 214</value>
   </data>
   <data name="btnBrowseArg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
+    <value>30, 18</value>
   </data>
   <data name="btnBrowseArg.TabIndex" type="System.Int32, mscorlib">
     <value>850</value>
@@ -568,19 +568,70 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnBrowseArg.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
+  </data>
+  <data name="lblRepeat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRepeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 72</value>
+  </data>
+  <data name="lblRepeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 12</value>
+  </data>
+  <data name="lblRepeat.TabIndex" type="System.Int32, mscorlib">
+    <value>241</value>
+  </data>
+  <data name="lblRepeat.Text" xml:space="preserve">
+    <value>&amp;Repeat Count:</value>
+  </data>
+  <data name="&gt;&gt;lblRepeat.Name" xml:space="preserve">
+    <value>lblRepeat</value>
+  </data>
+  <data name="&gt;&gt;lblRepeat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRepeat.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRepeat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="udRepeatCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 68</value>
+  </data>
+  <data name="udRepeatCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 19</value>
+  </data>
+  <data name="udRepeatCount.TabIndex" type="System.Int32, mscorlib">
+    <value>242</value>
+  </data>
+  <data name="udRepeatCount.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;udRepeatCount.Name" xml:space="preserve">
+    <value>udRepeatCount</value>
+  </data>
+  <data name="&gt;&gt;udRepeatCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;udRepeatCount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;udRepeatCount.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>371, 337</value>
+    <value>371, 311</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>379, 333</value>
+    <value>379, 310</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
