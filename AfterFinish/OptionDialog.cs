@@ -192,7 +192,8 @@ namespace Ambiesoft.AfterFinish
         {
             if(TogglePlayButton())
             {
-                PlayWav(false);
+                if (!PlayWav(false))
+                    TogglePlayButton(false);
             }
             else
             {
@@ -203,7 +204,7 @@ namespace Ambiesoft.AfterFinish
         {
             ++playid_;
         }
-        public void PlayWav(bool bShowNoError)
+        public bool PlayWav(bool bShowNoError)
         {
             if (!bShowNoError)
             {
@@ -213,7 +214,7 @@ namespace Ambiesoft.AfterFinish
                           Application.ProductName,
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Error);
-                    return;
+                    return false;
                 }
 
                 if (!File.Exists(txtWav.Text))
@@ -222,7 +223,7 @@ namespace Ambiesoft.AfterFinish
                           Application.ProductName,
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Error);
-                    return;
+                    return false;
                 }
             }
 
@@ -258,9 +259,10 @@ namespace Ambiesoft.AfterFinish
                           Application.ProductName,
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Error);
-                    return;
+                    return false;
                 }
             }
+            return true;
         }
 
         void PlayErrored(Exception ex)
@@ -370,6 +372,11 @@ namespace Ambiesoft.AfterFinish
                 Thread thread = new Thread(startOfShutdownThread);
                 thread.Start();
             }
+        }
+
+        private void OptionDialog_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            StopWav();
         }
     }
 }

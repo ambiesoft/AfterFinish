@@ -89,5 +89,10 @@ namespace TestAfterFinish
             }
             txtDescription.Text = afterFinisiDlg_.ToDescription();
         }
+
+        private void btnStopWav_Click(object sender, EventArgs e)
+        {
+            afterFinisiDlg_.StopWav();
+        }
     }
 }

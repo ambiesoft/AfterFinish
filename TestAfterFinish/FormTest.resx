@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEdit.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 59</value>
@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnLaunch.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 227</value>
@@ -189,6 +189,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnLaunch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnStopWav.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 227</value>
+  </data>
+  <data name="btnStopWav.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnStopWav.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnStopWav.Text" xml:space="preserve">
+    <value>Stop Sound</value>
+  </data>
+  <data name="&gt;&gt;btnStopWav.Name" xml:space="preserve">
+    <value>btnStopWav</value>
+  </data>
+  <data name="&gt;&gt;btnStopWav.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnStopWav.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnStopWav.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -206,6 +206,7 @@
             this.Name = "OptionDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OptionDialog_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.udRepeatCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

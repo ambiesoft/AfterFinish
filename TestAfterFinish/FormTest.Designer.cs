@@ -32,6 +32,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnLaunch = new System.Windows.Forms.Button();
+            this.btnStopWav = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -53,10 +54,18 @@
             this.btnLaunch.UseVisualStyleBackColor = true;
             this.btnLaunch.Click += new System.EventHandler(this.btnLaunch_Click);
             // 
+            // btnStopWav
+            // 
+            resources.ApplyResources(this.btnStopWav, "btnStopWav");
+            this.btnStopWav.Name = "btnStopWav";
+            this.btnStopWav.UseVisualStyleBackColor = true;
+            this.btnStopWav.Click += new System.EventHandler(this.btnStopWav_Click);
+            // 
             // FormTest
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnStopWav);
             this.Controls.Add(this.btnLaunch);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.btnEdit);
@@ -72,6 +81,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Button btnLaunch;
+        private System.Windows.Forms.Button btnStopWav;
     }
 }
 
