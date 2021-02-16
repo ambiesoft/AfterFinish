@@ -64,7 +64,7 @@
             // FormTest
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.btnStopWav);
             this.Controls.Add(this.btnLaunch);
             this.Controls.Add(this.txtDescription);

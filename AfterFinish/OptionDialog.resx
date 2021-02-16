@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 302</value>
+    <value>167, 300</value>
   </data>
   <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 23</value>
@@ -151,7 +151,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 302</value>
+    <value>280, 300</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 23</value>
@@ -181,7 +181,7 @@
     <value>8, 12</value>
   </data>
   <data name="chkPlaySound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 17</value>
+    <value>90, 19</value>
   </data>
   <data name="chkPlaySound.TabIndex" type="System.Int32, mscorlib">
     <value>200</value>
@@ -208,7 +208,7 @@
     <value>8, 157</value>
   </data>
   <data name="chkLaunchApp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>93, 19</value>
   </data>
   <data name="chkLaunchApp.TabIndex" type="System.Int32, mscorlib">
     <value>300</value>
@@ -235,7 +235,7 @@
     <value>8, 178</value>
   </data>
   <data name="lblApplication.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+    <value>75, 15</value>
   </data>
   <data name="lblApplication.TabIndex" type="System.Int32, mscorlib">
     <value>400</value>
@@ -262,7 +262,7 @@
     <value>8, 193</value>
   </data>
   <data name="txtApp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 20</value>
+    <value>343, 23</value>
   </data>
   <data name="txtApp.TabIndex" type="System.Int32, mscorlib">
     <value>500</value>
@@ -286,7 +286,7 @@
     <value>8, 217</value>
   </data>
   <data name="lblArg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
+    <value>76, 15</value>
   </data>
   <data name="lblArg.TabIndex" type="System.Int32, mscorlib">
     <value>700</value>
@@ -313,7 +313,7 @@
     <value>8, 232</value>
   </data>
   <data name="txtArg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 20</value>
+    <value>343, 23</value>
   </data>
   <data name="txtArg.TabIndex" type="System.Int32, mscorlib">
     <value>800</value>
@@ -334,10 +334,10 @@
     <value>Top, Right</value>
   </data>
   <data name="btnBrowseApp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 193</value>
+    <value>357, 193</value>
   </data>
   <data name="btnBrowseApp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
+    <value>30, 23</value>
   </data>
   <data name="btnBrowseApp.TabIndex" type="System.Int32, mscorlib">
     <value>600</value>
@@ -364,7 +364,7 @@
     <value>8, 112</value>
   </data>
   <data name="chkOpenFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>96, 19</value>
   </data>
   <data name="chkOpenFolder.TabIndex" type="System.Int32, mscorlib">
     <value>250</value>
@@ -391,7 +391,7 @@
     <value>8, 134</value>
   </data>
   <data name="chkShutdown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+    <value>105, 19</value>
   </data>
   <data name="chkShutdown.TabIndex" type="System.Int32, mscorlib">
     <value>275</value>
@@ -418,7 +418,7 @@
     <value>5, 33</value>
   </data>
   <data name="lblWave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+    <value>74, 15</value>
   </data>
   <data name="lblWave.TabIndex" type="System.Int32, mscorlib">
     <value>225</value>
@@ -445,7 +445,7 @@
     <value>8, 48</value>
   </data>
   <data name="txtWav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 20</value>
+    <value>343, 23</value>
   </data>
   <data name="txtWav.TabIndex" type="System.Int32, mscorlib">
     <value>230</value>
@@ -466,7 +466,7 @@
     <value>Top, Right</value>
   </data>
   <data name="btnBrowseWav.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 48</value>
+    <value>357, 48</value>
   </data>
   <data name="btnBrowseWav.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 21</value>
@@ -493,7 +493,7 @@
     <value>Top, Right</value>
   </data>
   <data name="btnTestSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 74</value>
+    <value>273, 74</value>
   </data>
   <data name="btnTestSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 23</value>
@@ -516,8 +516,11 @@
   <data name="&gt;&gt;btnTestSound.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="btnLanuchTest.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="btnLanuchTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 258</value>
+    <value>280, 258</value>
   </data>
   <data name="btnLanuchTest.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 23</value>
@@ -547,10 +550,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnBrowseArg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 232</value>
+    <value>357, 232</value>
   </data>
   <data name="btnBrowseArg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
+    <value>30, 23</value>
   </data>
   <data name="btnBrowseArg.TabIndex" type="System.Int32, mscorlib">
     <value>850</value>
@@ -577,7 +580,7 @@
     <value>5, 78</value>
   </data>
   <data name="lblRepeat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+    <value>91, 15</value>
   </data>
   <data name="lblRepeat.TabIndex" type="System.Int32, mscorlib">
     <value>241</value>
@@ -601,7 +604,7 @@
     <value>106, 74</value>
   </data>
   <data name="udRepeatCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>61, 23</value>
   </data>
   <data name="udRepeatCount.TabIndex" type="System.Int32, mscorlib">
     <value>242</value>
@@ -625,13 +628,19 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>371, 337</value>
+    <value>399, 335</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 9pt</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>379, 333</value>
+    <value>415, 374</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
