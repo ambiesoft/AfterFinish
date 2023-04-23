@@ -344,10 +344,12 @@ namespace Ambiesoft.AfterFinish
         }
         void startOfShutdownThread()
         {
-            Ambiesoft.AfterRunLib.FormMain form = new AfterRunLib.FormMain();
-            form.IsShutdown = true;
-            form.Interval = 30;
-            form.TopMost = true;
+            Ambiesoft.AfterRunLib.FormMain form = new AfterRunLib.FormMain(
+                new Ambiesoft.AfterRunLib.UserInput(
+                    true,
+                    null,
+                    30,
+                    null));
             form.ShowDialog(null);
         }
         public void DoNotify()
