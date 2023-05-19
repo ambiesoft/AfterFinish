@@ -111,12 +111,38 @@ namespace Ambiesoft.AfterFinish
                 return;
             txtApp.Text = app;
         }
+
+        MacroManager _mm;
+        public void SetArgMacro(string name , string value)
+        {
+            if (_mm == null)
+                _mm = new MacroManager();
+            _mm.SetMacro(name, value);
+        }
+        public string ExpandMacro()
+        {
+            if (_mm == null)
+                return null;
+            _mm.InputString = txtArg.Text;
+            return _mm.ResultString;
+        }
         private void btnBrowseArg_Click(object sender, EventArgs e)
         {
-            string arg = AmbLib.GetOpenFileDialog(Properties.Resources.STR_CHOOSE_FILE);
-            if (string.IsNullOrEmpty(arg))
-                return;
-            txtArg.Text = arg;
+            if (_mm != null)
+            {
+                _mm.Text = string.Format("{0} - Macro", Application.ProductName);
+                _mm.InputString = txtArg.Text;
+                if (DialogResult.OK != _mm.ShowDialog())
+                    return;
+                txtArg.Text = _mm.InputString;
+            }
+            else
+            {
+                string arg = AmbLib.GetOpenFileDialog(Properties.Resources.STR_CHOOSE_FILE);
+                if (string.IsNullOrEmpty(arg))
+                    return;
+                txtArg.Text = arg;
+            }
         }
 
         private void chkPlaySound_CheckedChanged(object sender, EventArgs e)
@@ -321,11 +347,14 @@ namespace Ambiesoft.AfterFinish
         {
             try
             {
-                if (!string.IsNullOrEmpty(txtApp.Text) && !string.IsNullOrEmpty(txtArg.Text))
-                    Process.Start(txtApp.Text, txtArg.Text);
+                string arg = txtArg.Text;
+                if (_mm != null)
+                    arg = ExpandMacro();
+                if (!string.IsNullOrEmpty(txtApp.Text) && !string.IsNullOrEmpty(arg))
+                    Process.Start(txtApp.Text, arg);
                 else
                     Process.Start(!string.IsNullOrEmpty(txtApp.Text) ?
-                        txtApp.Text : txtArg.Text);
+                        txtApp.Text : arg);
             }
             catch (Exception ex)
             {

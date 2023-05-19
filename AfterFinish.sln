@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zzzDist", "zzzDist\zzzDist.
 		{C44E9490-CD46-4A44-B3CC-7928E780AD62} = {C44E9490-CD46-4A44-B3CC-7928E780AD62}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAfterFinishHighDPI", "TestAfterFinishHighDPI\TestAfterFinishHighDPI.csproj", "{6C14AC90-B14B-4F20-A71C-3E96F8C9D05A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{12BBF397-272F-45B0-AF11-FC1F4825D44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12BBF397-272F-45B0-AF11-FC1F4825D44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12BBF397-272F-45B0-AF11-FC1F4825D44C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C14AC90-B14B-4F20-A71C-3E96F8C9D05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C14AC90-B14B-4F20-A71C-3E96F8C9D05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C14AC90-B14B-4F20-A71C-3E96F8C9D05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C14AC90-B14B-4F20-A71C-3E96F8C9D05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
