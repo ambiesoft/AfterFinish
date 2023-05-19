@@ -24,12 +24,15 @@
         "Ambiesoft.AfterRunLib.pdb",
         "ja-JP\\Ambiesoft.AfterRunLib.resources.dll",
         "Ambiesoft.AfterRunLib.dll",
-        "ja-JP\\Ambiesoft.AfterFinish.resources.dll"
+        "ja-JP\\Ambiesoft.AfterFinish.resources.dll",
+        "Ambiesoft.MacroManager.dll",
+        "ja-JP\\Ambiesoft.MacroManager.resources.dll",
+        "Ambiesoft.MacroManager.pdb"
     ],
     "TotalFileCount": "exact",
     "archivedir": "C:/Linkout/",
-    "remotedir":   "http://ambiesoft.mooo.com/ffdav/uploads/AfterFinish/",
-    "remotesha1" : "http://ambiesoft.mooo.com/ffdav/uploads/getSha1.php?file=AfterFinish/{}",
+    "remotedir":   "https://ambiesoft.com/ffdav/uploads/AfterFinish/",
+    "remotesha1" : "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=AfterFinish/{}",
     "ShouldNotBeFiles": [],
     "ShouldBeOneOfThem": [],
     "obtainverfrom": "Ambiesoft.AfterFinish.history.txt",
