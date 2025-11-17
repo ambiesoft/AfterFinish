@@ -18,6 +18,12 @@ namespace TestAfterFinish
         public FormTest()
         {
             InitializeComponent();
+
+            afterFinisiDlg_.OnLaunch += AfterFinisiDlg__OnLaunch;
+        }
+
+        private void AfterFinisiDlg__OnLaunch(object sender, Ambiesoft.AfterFinish.LaunchEventArgs e)
+        {
         }
 
         string IniPath

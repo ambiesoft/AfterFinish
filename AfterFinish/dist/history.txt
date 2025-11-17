@@ -1,4 +1,7 @@
-﻿2023/05/20 v2.0.2
+﻿2025/11/17 v2.0.3
+Added OnLaunch event
+
+2023/05/20 v2.0.2
 Added Macro feature
 
 2023/04/24 v2.0.1

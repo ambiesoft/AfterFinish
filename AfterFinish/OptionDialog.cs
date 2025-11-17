@@ -32,6 +32,12 @@ namespace Ambiesoft.AfterFinish
         bool bShowOpenFolder_;
         bool bShowShutdown_;
         bool bShowLaunchApp_;
+
+        /// <summary>
+        /// Raised before an application is launched. Subscribers can set LaunchEventArgs.Cancel = true to prevent the launch.
+        /// </summary>
+        public event EventHandler<LaunchEventArgs> OnLaunch;
+
         public OptionDialog(
             bool bShowPlaySound,
             bool bShowOpenFolder,
@@ -343,6 +349,7 @@ namespace Ambiesoft.AfterFinish
         {
             LaunchApp();
         }
+
         void LaunchApp(bool bNotShowError)
         {
             try
@@ -350,11 +357,31 @@ namespace Ambiesoft.AfterFinish
                 string arg = txtArg.Text;
                 if (_mm != null)
                     arg = ExpandMacro();
-                if (!string.IsNullOrEmpty(txtApp.Text) && !string.IsNullOrEmpty(arg))
-                    Process.Start(txtApp.Text, arg);
+
+                string file = txtApp.Text;
+
+                // Raise the OnLaunch event to allow subscribers to inspect or cancel the launch
+                var ev = new LaunchEventArgs()
+                {
+                    FileName = file,
+                    Arguments = arg,
+                    Cancel = false
+                };
+                try
+                {
+                    OnLaunch?.Invoke(this, ev);
+                }
+                catch
+                {
+                    // Swallow exceptions from event handlers to avoid crashing the caller.
+                }
+                if (ev.Cancel)
+                    return;
+
+                if (!string.IsNullOrEmpty(file) && !string.IsNullOrEmpty(arg))
+                    Process.Start(file, arg);
                 else
-                    Process.Start(!string.IsNullOrEmpty(txtApp.Text) ?
-                        txtApp.Text : arg);
+                    Process.Start(!string.IsNullOrEmpty(file) ? file : arg);
             }
             catch (Exception ex)
             {
@@ -373,14 +400,34 @@ namespace Ambiesoft.AfterFinish
         }
         void startOfShutdownThread()
         {
-            Ambiesoft.AfterRunLib.FormMain form = new AfterRunLib.FormMain(
+            Ambiesoft.AfterRunLib.FormMain formAfterrun = new AfterRunLib.FormMain(
                 new Ambiesoft.AfterRunLib.UserInput(
                     true,
                     null,
                     30,
                     null));
-            form.ShowDialog(null);
+            formAfterrun.OnLaunch += FormAfterrun_OnLaunch;
+            formAfterrun.ShowDialog(null);
         }
+
+        private void FormAfterrun_OnLaunch(object sender, AfterRunLib.FormMain.LaunchEventArgs e)
+        {
+            var ev = new LaunchEventArgs()
+            {
+                FileName = "Not yet implemented",
+                Arguments = "Not yet implemented",
+                Cancel = false,
+            };
+            try
+            {
+                OnLaunch?.Invoke(this, ev);
+            }
+            catch
+            {
+                // Swallow exceptions from event handlers to avoid crashing the caller.
+            }
+        }
+
         public void DoNotify()
         {
             if(bShowPlaySound_ && chkPlaySound.Checked)
@@ -410,4 +457,15 @@ namespace Ambiesoft.AfterFinish
             StopWav();
         }
     }
+
+    public class LaunchEventArgs : EventArgs
+    {
+        public string FileName { get; set; }
+        public string Arguments { get; set; }
+        /// <summary>
+        /// If set to true by the event subscriber, the launch will be canceled.
+        /// </summary>
+        public bool Cancel { get; set; }
+    }
+
 }
