@@ -27,12 +27,17 @@
         "ja-JP\\Ambiesoft.AfterFinish.resources.dll",
         "Ambiesoft.MacroManager.dll",
         "ja-JP\\Ambiesoft.MacroManager.resources.dll",
-        "Ambiesoft.MacroManager.pdb"
+        "Ambiesoft.MacroManager.pdb",
+		"Microsoft.WindowsAPICodePack.Shell.xml",
+		"Microsoft.WindowsAPICodePack.xml",
+		"Microsoft.WindowsAPICodePack.dll",
+		"Microsoft.WindowsAPICodePack.Shell.dll"
     ],
     "TotalFileCount": "exact",
     "archivedir": "C:/Linkout/",
     "remotedir":   "https://ambiesoft.com/ffdav/uploads/AfterFinish/",
     "remotesha1" : "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=AfterFinish/{}",
+    "remoteonedrivedir":"https://1drv.ms/f/c/f0d9ddc561f5cf32/ElPm9nejDqZOnPUN3ZQfwK0BIh7spKOlD70WhHDCSa5iSA?e=uXP7g5",
     "ShouldNotBeFiles": [],
     "ShouldBeOneOfThem": [],
     "obtainverfrom": "Ambiesoft.AfterFinish.history.txt",
